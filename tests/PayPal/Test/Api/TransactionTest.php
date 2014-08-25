@@ -13,11 +13,13 @@ class TransactionTest extends \PHPUnit_Framework_TestCase {
 
 	public static $description = "desc . . . ";
 	public static $total = "1.12";	
+	public static $invoiceNumber = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 	public static function createTransaction() {
 		$transaction = new Transaction();
 		$transaction->setAmount(AmountTest::createAmount());
 		$transaction->setDescription(self::$description);
+		$transaction->setInvoiceNumber(self::$invoiceNumber);
 		$transaction->setItemList(ItemListTest::createItemList());
 		$transaction->setPayee(PayeeTest::createPayee());
  		$transaction->setRelatedResources( array(RelatedResourcesTest::createRelatedResources()) );
@@ -31,6 +33,7 @@ class TransactionTest extends \PHPUnit_Framework_TestCase {
 	public function testGetterSetter() {
 		$this->assertEquals(AmountTest::$currency, $this->transaction->getAmount()->getCurrency());
 		$this->assertEquals(self::$description, $this->transaction->getDescription());
+		$this->assertEquals(self::$invoiceNumber, $this->transaction->getInvoiceNumber());
 		$items = $this->transaction->getItemList()->getItems();
 		$this->assertEquals(ItemTest::$quantity, $items[0]->getQuantity());
 		$this->assertEquals(PayeeTest::$email, $this->transaction->getPayee()->getEmail());
