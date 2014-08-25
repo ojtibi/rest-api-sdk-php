@@ -1,5 +1,5 @@
 {
-    "name": "ojtibi/rest-api-sdk-php",
+    "name": "paypal/rest-api-sdk-php",
     "description": "PayPal's PHP SDK for REST APIs (forked from paypal/rest-api-sdk-php)",
     "keywords": ["paypal", "payments", "rest", "sdk"],
     "type": "library",
