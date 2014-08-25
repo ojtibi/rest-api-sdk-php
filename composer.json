@@ -1,14 +1,18 @@
 {
-    "name": "paypal/rest-api-sdk-php",
-    "description": "PayPal's PHP SDK for REST APIs",
+    "name": "ojtibi/rest-api-sdk-php",
+    "description": "PayPal's PHP SDK for REST APIs (forked from paypal/rest-api-sdk-php)",
     "keywords": ["paypal", "payments", "rest", "sdk"],
     "type": "library",
     "license": "Apache2",
-    "homepage": "https://github.com/paypal/rest-api-sdk-php",
+    "homepage": "https://github.com/ojtibi/rest-api-sdk-php",
     "authors": [
         {
             "name": "PayPal",
             "homepage": "https://github.com/paypal/rest-api-sdk-php/contributors"
+        },
+        {
+            "name": "OJ Tibi",
+            "homepage": "https://github.com/ojtibi"
         }
     ],
     "require": {
