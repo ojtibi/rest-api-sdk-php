@@ -96,6 +96,32 @@ class Transaction extends PPModel
     }
 
     /**
+     * Set Invoice Number
+     * Invoice number used to track the payment
+     *
+     * @param string $invoice_number
+     *
+     * @return $this
+     */
+    public function setInvoiceNumber($invoice_number)
+    {
+        $this->invoice_number = $invoice_number;
+
+        return $this;
+    }
+
+    /**
+     * Get Invoice Number
+     * Invoice number used to track the payment
+     *
+     * @return string
+     */
+    public function getInvoiceNumber()
+    {
+        return $this->invoice_number;
+    }
+
+    /**
      * Set Item List
      * List of items being paid for
      *
